@@ -1,0 +1,43 @@
+:root {
+  /* Extension's color system (HSL values from chrome-extension/src/styles.css) */
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215 15% 45%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --primary: 222 84% 55%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222 47% 11%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 217 91% 60%;
+  --radius: 0.65rem;
+
+  /* Website light theme (for marketing sections) */
+  --bg-dark: #ffffff;
+  --bg-dark-secondary: #f8f9fa;
+  --bg-dark-card: #ffffff;
+  --text-light: #111827;
+  --text-light-secondary: #6b7280;
+  --text-light-muted: #9ca3af;
+  --border-dark: #e5e7eb;
+  --border-dark-active: rgba(59, 130, 246, 0.4);
+  --accent-blue: #3b82f6;
+  --accent-blue-glow: rgba(59, 130, 246, 0.08);
+  --accent-warm: #8b5cf6;
+  --green: #10b981;
+
+  /* Spacing tokens */
+  --section-padding: 100px 40px;
+  --showcase-padding: 120px 40px;
+  --content-max-width: 1200px;
+  --card-radius: 1rem;
+}

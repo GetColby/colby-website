@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colby AI | Turbocharged Fundraising</title>
+  <meta name="description"
+    content="Automate non-selling tasks like generating reports, doing research, and entering data using AI trained specifically for selling Asset Management products.">
+  <meta property="og:title" content="Colby AI | Turbocharged Fundraising">
+  <meta property="og:description"
+    content="Raise more capital, faster & more efficiently with AI built for Asset Management.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/icon-128.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#" class="logo" aria-label="Colby AI home">
+      <img src="assets/logo.png" alt="Colby AI">
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#integration">Integration</a>
+      <a href="#features">Features</a>
+      <a href="#team">Team</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="https://calendly.com/connor-getcolby/30min" class="cta-btn">Book Demo</a>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Hero — Centered Layout -->
+    <section class="section hero-section">
+      <div class="hero-text">
+        <div class="hero-badge">V2 Is Out Now</div>
+        <h1 class="hero-headline">Raise more capital,<br>faster &amp; more efficiently</h1>
+        <p class="hero-subheadline">Automate non-selling tasks like generating reports, doing research, and entering
+          data using AI trained specifically for selling Asset Management products to Institutional &amp; Intermediary
+          Investors</p>
+        <div class="hero-ctas">
+          <a href="https://calendly.com/connor-getcolby/30min" class="hero-btn-primary">Schedule a Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Showcase — Scroll-driven feature demos -->
+    <section class="demo-showcase" id="features">
+      <div class="demo-showcase-inner">
+        <!-- Left: scrolling text panels -->
+        <div class="demo-scenes">
+          <div class="demo-scene demo-scene--intro" data-scene="intro">
+            <div class="demo-scene-content">
+              <h2 class="section-title">What can Colby do?</h2>
+              <p class="section-subtitle">Designed to Simplify Your Fundraising Experience and Maximize the Capital You
+                Raise.</p>
+            </div>
+          </div>
+          <div class="demo-scene" data-scene="showcaseDemo1">
+            <div class="demo-scene-content">
+              <div class="demo-scene-label">01</div>
+              <h2 class="showcase-title">Granular Reports in Seconds.</h2>
+              <p class="showcase-desc">Create granular reports for front line sales teams in a single prompt.</p>
+              <a href="#" class="showcase-cta">Learn More</a>
+            </div>
+          </div>
+          <div class="demo-scene" data-scene="showcaseDemo2">
+            <div class="demo-scene-content">
+              <div class="demo-scene-label">02</div>
+              <h2 class="showcase-title">Automated Data Entry.</h2>
+              <p class="showcase-desc">Enter data into Salesforce using speech, text, or by copying pasting meeting
+                notes. Colby parses the information and updates the right fields.</p>
+              <a href="#" class="showcase-cta">Learn More</a>
+            </div>
+          </div>
+          <div class="demo-scene" data-scene="showcaseDemo3">
+            <div class="demo-scene-content">
+              <div class="demo-scene-label">03</div>
+              <h2 class="showcase-title">Key Information at the Right Time</h2>
+              <p class="showcase-desc">Colby is built to automate the key parts of your day including research ahead of
+                a meeting, adding people to an email campaign, or recommending products.</p>
+              <a href="#" class="showcase-cta">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Right: sticky demo panel -->
+        <div class="demo-sticky-panel centered" id="demoPanel">
+          <div class="chat-container" id="chatContainer" role="region" aria-label="Chat demo">
+            <!-- Chat Header -->
+            <div class="chat-header">
+              <div class="chat-header-left">
+                <div class="chat-header-title">Colby</div>
+                <div class="chat-header-status">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                    <line x1="12" y1="20" x2="12.01" y2="20" />
+                  </svg>
+                  <span>Connected &bull; 42 ms</span>
+                </div>
+              </div>
+              <button class="chat-header-settings-btn" type="button" aria-label="Settings">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M20 7h-9" />
+                  <path d="M14 17H5" />
+                  <circle cx="17" cy="17" r="3" />
+                  <circle cx="7" cy="7" r="3" />
+                </svg>
+                Settings
+              </button>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chatMessages" role="log" aria-live="polite"></div>
+
+            <!-- Suggestion Pills -->
+            <div class="suggestions" id="suggestions"></div>
+
+            <!-- Chat Input -->
+            <div class="chat-input-area">
+              <div class="chat-input-card">
+                <textarea id="chatInput" rows="1" placeholder="Ask anything about your Salesforce data..."
+                  aria-label="Chat message input" readonly tabindex="-1"></textarea>
+                <div class="chat-input-controls">
+                  <div class="mic-btn" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                      <line x1="12" y1="19" x2="12" y2="23" />
+                      <line x1="8" y1="23" x2="16" y2="23" />
+                    </svg>
+                    Mic
+                  </div>
+                  <div class="send-btn" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="22" y1="2" x2="11" y2="13" />
+                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                    Send
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Integration — Built on your systems -->
+    <section class="section integration-section" id="integration">
+      <div class="section-heading">
+        <h2 class="section-title">Built on your systems</h2>
+        <p class="section-subtitle">Colby connects directly to your existing Salesforce where it makes updates, builds
+          reports, or does research based on your existing data.</p>
+      </div>
+      <div class="integration-grid">
+        <div class="integration-card">
+          <h3 class="integration-card-title">Seamless Integration</h3>
+          <p class="integration-card-desc">Colby integrates with Salesforce natively so there is no bulky integration
+            process.</p>
+          <div class="integration-feature">
+            <div class="integration-feature-title">One-Click</div>
+            <div class="integration-feature-label">Integration</div>
+            <div class="integration-icons">
+              <div class="integration-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12.5 2.1c-.3-.1-.7-.1-1 0C6.3 4.2 3 9.4 3 14c0 1.6.4 3.1 1.2 4.4.3.5.8.8 1.3.8h13c.5 0 1-.3 1.3-.8.8-1.3 1.2-2.8 1.2-4.4 0-4.6-3.3-9.8-8.5-11.9z" />
+                </svg>
+              </div>
+              <div class="integration-icon">
+                <img src="assets/logo.png" alt="Colby" width="24" height="24">
+              </div>
+              <div class="integration-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="integration-card-footer">Integration helps Colby leverage the best information available internally
+            and externally.</p>
+        </div>
+        <div class="integration-card">
+          <h3 class="integration-card-title">Security First</h3>
+          <p class="integration-card-desc">Colby's platform is reviewed using Vanta for SOC II standards of compliance
+            and data security.</p>
+          <div class="integration-feature">
+            <div class="integration-feature-title">ISO SOC II</div>
+            <div class="integration-feature-label">In Progress</div>
+          </div>
+          <div class="integration-items">
+            <div class="integration-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <div>
+                <div class="integration-item-title">Existing Permissions</div>
+                <div class="integration-item-desc">User permissions are Salesforce based</div>
+              </div>
+            </div>
+            <div class="integration-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              <div>
+                <div class="integration-item-title">Secure Platform</div>
+                <div class="integration-item-desc">Built on Google's secure cloud</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Team -->
+    <section class="section" id="team">
+      <p class="team-heading">Built by a team with Fintech &amp; Asset Management experience</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M20 21a8 8 0 1 0-16 0" />
+            </svg>
+          </div>
+          <div class="team-name">Connor O'Brien - CEO</div>
+          <div class="team-prev">Previously @</div>
+          <div class="team-logos">
+            <span class="team-logo-text">Alpha</span>
+            <span class="team-logo-text">APOLLO</span>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M20 21a8 8 0 1 0-16 0" />
+            </svg>
+          </div>
+          <div class="team-name">Eric Zhong - CTO</div>
+          <div class="team-prev">Previously @</div>
+          <div class="team-logos">
+            <span class="team-logo-text">arta</span>
+            <span class="team-logo-text">coinbase</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- AI Built for Asset Managers -->
+    <section class="section ai-section">
+      <div class="ai-grid">
+        <div class="ai-text">
+          <h2 class="ai-title">AI Built for Asset Managers</h2>
+          <p class="ai-desc">Colby is built for Asset Managers and understands the unique structures, products, and
+            processes involved</p>
+        </div>
+        <div class="ai-cards">
+          <div class="ai-card">
+            <div class="ai-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8l4 4-4 4M8 12h8" />
+              </svg>
+            </div>
+            <h3 class="ai-card-title">Industry Context</h3>
+            <p class="ai-card-desc">Wirehouses, Private Banks, RIAs, Pensions, Consultants, Endowments, etc. all have
+              unique ways to land a product. Colby is built with context into the most complex go to market</p>
+          </div>
+          <div class="ai-card">
+            <div class="ai-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+            </div>
+            <h3 class="ai-card-title">Specialized Tooling</h3>
+            <p class="ai-card-desc">In addition to using your data, Colby is connected to the web and confirms data with
+              BrokerCheck, Public Pension reports, and Wealth Manager websites</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+      <div class="faq-grid">
+        <div class="faq-sidebar">
+          <h2 class="faq-title">Common<br>Questions</h2>
+          <p class="faq-contact">Haven't found what you're looking for?<br><a href="#">Contact us</a></p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-question">How long is implementation?</h3>
+            <p class="faq-answer">Implementation typically takes two weeks. During this time we run close to one
+              thousand tests to confirm how our model interacts with your Salesforce environment.</p>
+            <p class="faq-answer">In some cases, for highly custom environments, implementation can take up to a few
+              weeks longer.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Is my data secure with Colby?</h3>
+            <p class="faq-answer">Yes! We use common security best practices and build ontop of Google's existing cloud
+              infrastructure to keep your data safe. As added security, your data is encrypted both at rest and in
+              transit.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">What permissions does Colby have? Is it safe?</h3>
+            <p class="faq-answer">Colby can not delete records; likewise, and large edits require your review before
+              they are pushed into the system. By including manual review and limiting Colby's functionality, it
+              prevents erroneous changes.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Can anyone use Colby?</h3>
+            <p class="faq-answer">Yes, but Colby requires that you have access to a Salesforce account. Colby also
+              requires a Salesforce tier with API access. If you don't know whether your organization has this, there is
+              no harm in trying Colby and seeing if it works!</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Does Colby save my data?</h3>
+            <p class="faq-answer">No, Colby deletes all data after each session. This ensures that your data stays yours
+              and reduces the risk for any data leak or privacy issues in the future.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="Colby AI home">
+          <img src="assets/logo.png" alt="Colby AI">
+        </a>
+        <div class="footer-divider-v"></div>
+        <span class="footer-tagline">Helping asset managers raise more money, faster and cheaper</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-left">Copyright &copy; 2025 Colby AI. All Rights Reserved</div>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/company/colbyai" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/showcase-demos.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/chat-demo.js"></script>
+  <script src="js/scroll-showcase.js"></script>
+
+</body>
+
+</html>

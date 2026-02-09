@@ -1,0 +1,114 @@
+/* Modern reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+body {
+  --mouse-x: 0.5;
+  --mouse-y: 0.5;
+}
+
+/* Graph paper grid with cursor-clearing effect */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(to right, rgba(0,0,0,0.06) 0px, rgba(0,0,0,0.06) 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(to bottom, rgba(0,0,0,0.06) 0px, rgba(0,0,0,0.06) 1px, transparent 1px, transparent 40px);
+  -webkit-mask-image: radial-gradient(300px circle at calc(var(--mouse-x)*100%) calc(var(--mouse-y)*100%), transparent 0%, transparent 30%, rgba(0,0,0,0.4) 50%, black 70%);
+  mask-image: radial-gradient(300px circle at calc(var(--mouse-x)*100%) calc(var(--mouse-y)*100%), transparent 0%, transparent 30%, rgba(0,0,0,0.4) 50%, black 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+/* Main content */
+.main {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section base */
+.section {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--section-padding);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero section — centered layout */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 48px;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  opacity: 1;
+  transform: none;
+}
+
+/* Section divider */
+.section-divider {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  height: 1px;
+  background: var(--border-dark);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .section {
+    padding: 80px 30px;
+  }
+
+  .hero-section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .hero-section {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+}
