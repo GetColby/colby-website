@@ -83,3 +83,21 @@
     }
   });
 })();
+
+// ── Evaluate Colby dropdown toggle ──
+(function () {
+  var evalBtn = document.querySelector('.evaluate-btn');
+  var evalMenu = document.querySelector('.evaluate-menu');
+  if (!evalBtn || !evalMenu) return;
+
+  evalBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    evalMenu.classList.toggle('open');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!evalBtn.contains(e.target) && !evalMenu.contains(e.target)) {
+      evalMenu.classList.remove('open');
+    }
+  });
+})();

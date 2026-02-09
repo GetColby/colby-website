@@ -159,6 +159,70 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
+.hero-btn-secondary {
+  display: inline-block;
+  padding: 13px 28px;
+  background: transparent;
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-dark-active);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hero-btn-secondary:hover {
+  background: var(--text-light);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.evaluate-dropdown {
+  position: relative;
+}
+
+.evaluate-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  padding: 6px;
+  z-index: 50;
+}
+
+.evaluate-menu.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.evaluate-menu a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.evaluate-menu a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
 /* ══════════════════════════════════════════
    Demo Showcase — Scroll-driven section
    ══════════════════════════════════════════ */
@@ -867,6 +931,9 @@
 
 .integration-icon img {
   border-radius: 6px;
+  max-width: 36px;
+  max-height: 36px;
+  object-fit: contain;
 }
 
 .integration-card-footer {
@@ -1460,8 +1527,21 @@
     gap: 10px;
   }
 
-  .hero-btn-primary {
+  .hero-btn-primary,
+  .hero-btn-secondary {
     text-align: center;
+    width: 100%;
+  }
+
+  .evaluate-dropdown {
+    width: 100%;
+  }
+
+  .evaluate-menu {
+    left: 0;
+    right: 0;
+    transform: none;
+    min-width: 0;
   }
 
   .chat-container {
