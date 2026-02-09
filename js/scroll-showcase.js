@@ -6,6 +6,7 @@
   var chatInputArea = document.querySelector('.demo-sticky-panel .chat-input-area');
   var scenes = document.querySelectorAll('.demo-scene');
   var sectionTitle = document.querySelector('.demo-scene--intro .section-title');
+  var tryItAnnotation = document.getElementById('tryItAnnotation');
 
   if (!panel || !scenes.length) return;
 
@@ -157,6 +158,9 @@
       if (suggestionsEl) suggestionsEl.style.display = '';
       if (chatInputArea) chatInputArea.style.display = '';
 
+      // Show "try it" annotation
+      if (tryItAnnotation) tryItAnnotation.classList.add('visible');
+
     } else {
       // Feature scene — scroll-driven mode
 
@@ -178,6 +182,9 @@
       // Hide suggestions + input
       if (suggestionsEl) suggestionsEl.style.display = 'none';
       if (chatInputArea) chatInputArea.style.display = 'none';
+
+      // Hide "try it" annotation
+      if (tryItAnnotation) tryItAnnotation.classList.remove('visible');
 
       // Find the scene DOM element
       var sceneEl = null;
@@ -230,6 +237,7 @@
   activeScene = 'intro';
   var introContent = document.querySelector('.demo-scene--intro .demo-scene-content');
   if (introContent) introContent.classList.add('visible');
+  if (tryItAnnotation) tryItAnnotation.classList.add('visible');
 
   // Run initial scroll check after a short delay to handle page loads mid-scroll
   setTimeout(function () {
