@@ -92,6 +92,11 @@ body::before {
 
 /* Responsive */
 @media (max-width: 900px) {
+  body::before {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
   .section {
     padding: 80px 30px;
   }

@@ -24,6 +24,17 @@
     if (isMobile) {
       centerOffset = 0;
       panel.style.transform = '';
+
+      // On mobile: force interactive mode, show suggestions/input, reveal all scene text
+      if (window.chatDemoEngine) {
+        window.chatDemoEngine.isInteractive = true;
+      }
+      if (suggestionsEl) suggestionsEl.style.display = '';
+      if (chatInputArea) chatInputArea.style.display = '';
+      scenes.forEach(function (scene) {
+        var content = scene.querySelector('.demo-scene-content');
+        if (content) content.classList.add('visible');
+      });
       return;
     }
     var inner = panel.parentElement;
@@ -92,6 +103,9 @@
     ticking = true;
     requestAnimationFrame(function () {
       ticking = false;
+
+      // On mobile, skip all scroll-driven scene detection and mode switching
+      if (isMobile) return;
 
       // Panel position tracks scroll every frame
       updatePanelPosition();

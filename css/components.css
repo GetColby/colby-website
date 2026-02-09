@@ -1277,7 +1277,50 @@
    Responsive
    ══════════════════════════════════════════ */
 
+/* ══════════════════════════════════════════
+   Hamburger Menu Button (hidden on desktop)
+   ══════════════════════════════════════════ */
+
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text-light);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 @media (max-width: 900px) {
+  .header {
+    width: 85%;
+  }
+
   .hero-ctas {
     justify-content: center;
   }
@@ -1293,11 +1336,21 @@
 
   .demo-scene {
     min-height: auto;
-    padding: 60px 0;
+    padding: 24px 0;
   }
 
   .demo-scene--intro {
     min-height: auto;
+    text-align: center;
+  }
+
+  /* Feature scenes as stacked cards on mobile */
+  .demo-scene:not(.demo-scene--intro) {
+    padding: 20px;
+    border: 1px solid var(--border-dark);
+    border-radius: var(--card-radius);
+    background: var(--bg-dark-card);
+    margin-bottom: 16px;
   }
 
   .demo-sticky-panel {
@@ -1346,10 +1399,41 @@
   .header {
     padding: 10px 10px 10px 14px;
     top: 8px;
+    width: 92%;
+    flex-wrap: wrap;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
   }
 
   .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 0 0 16px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: none;
+    padding: 8px 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px 24px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
   }
 
   .hero-headline {
@@ -1391,6 +1475,20 @@
 
   .suggestion-chip {
     white-space: nowrap;
+    min-height: 44px;
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .showcase-cta,
+  .hero-btn-primary {
+    min-height: 44px;
+  }
+
+  .header .cta-btn {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 
   .footer {
@@ -1406,5 +1504,23 @@
     flex-direction: column;
     gap: 12px;
     text-align: center;
+  }
+}
+
+/* ══════════════════════════════════════════
+   Touch Feedback
+   ══════════════════════════════════════════ */
+
+@media (hover: none) {
+  .integration-card:active,
+  .ai-card:active,
+  .team-card:active {
+    border-color: var(--border-dark-active);
+  }
+
+  .showcase-cta:active,
+  .hero-btn-primary:active,
+  .suggestion-chip:active {
+    transform: scale(0.97);
   }
 }

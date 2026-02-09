@@ -339,7 +339,7 @@
     // Auto-scroll chat to latest revealed step (only when a new step crosses threshold)
     if (newRevealedIndex > lastRevealedIndex && newRevealedIndex >= 0) {
       var targetEl = renderedSteps[newRevealedIndex].el;
-      if (targetEl && chatMessages) {
+      if (targetEl && chatMessages && window.innerWidth > 900) {
         targetEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       }
     }
