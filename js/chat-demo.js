@@ -12,23 +12,23 @@
       intro: "Let me look into your day and see what you have coming up.",
       introDelay: 1500,
       actions: [
-        { type: 'tool', name: 'pull_calendar_events', requestType: 'salesforce_query', duration: 2400, preText: 'Pulling your calendar events from Salesforce' },
+        { type: 'tool', name: 'pull_calendar_events', duration: 2400, preText: 'Pulling your calendar events from Salesforce' },
         { type: 'text', delay: 1200, content: "Today you are meeting with the Williams Group at Morgan Stanley at 11:00 over Zoom and the Alpha Wealth Management Group at RBC. Let me do some research on the advisors on these teams." },
-        { type: 'tool', name: 'get_williams_contacts', requestType: 'salesforce_query', duration: 1800, preText: 'Pulling Williams Group contacts from Salesforce' },
-        { type: 'tool', name: 'get_williams_account', requestType: 'salesforce_query', duration: 1600, preText: 'Retrieving Williams Group account information' },
-        { type: 'tool', name: 'get_williams_opportunities', requestType: 'salesforce_query', duration: 2000, preText: 'Checking opportunities with Williams Group' },
-        { type: 'tool', name: 'get_williams_meeting_notes', requestType: 'salesforce_query', duration: 1400, preText: 'Pulling meeting note history for Williams Group' },
-        { type: 'tool', name: 'read_williams_group_website', requestType: 'external_search', duration: 5400, preText: 'Reading the Williams Group website' },
-        { type: 'tool', name: 'parse_williams_linkedin', requestType: 'external_search', duration: 4800, preText: 'Parsing Williams Group Linkedin' },
-        { type: 'tool', name: 'check_williams_finra', requestType: 'external_search', duration: 6000, preText: 'Checking Williams Group FINRA profiles' },
+        { type: 'tool', name: 'get_williams_contacts', duration: 1800, preText: 'Pulling Williams Group contacts from Salesforce' },
+        { type: 'tool', name: 'get_williams_account', duration: 1600, preText: 'Retrieving Williams Group account information' },
+        { type: 'tool', name: 'get_williams_opportunities', duration: 2000, preText: 'Checking opportunities with Williams Group' },
+        { type: 'tool', name: 'get_williams_meeting_notes', duration: 1400, preText: 'Pulling meeting note history for Williams Group' },
+        { type: 'tool', name: 'read_williams_group_website', duration: 5400, preText: 'Reading the Williams Group website' },
+        { type: 'tool', name: 'parse_williams_linkedin', duration: 4800, preText: 'Parsing Williams Group Linkedin' },
+        { type: 'tool', name: 'check_williams_finra', duration: 6000, preText: 'Checking Williams Group FINRA profiles' },
         { type: 'text', delay: 2400, content: "Some key pieces to think about:\n\n- Williams Group Meeting (Morgan Stanley)\n    - The Williams group is made up of:\n        - Robert J. Williams, CFP\u00ae - Senior Vice President, Senior Portfolio Management Director\n        - Jennifer Williams-Chen, CFA - Vice President, Wealth Advisor\n        - Michael Torres - Financial Advisor Associate\n    - Robert founded the practice 28 years ago and recently brought his daughter Jennifer onto the team after she started her career at Goldman Sachs Private Wealth Management.\n    - The Williams Group has historically favored low cost ETFs and index strategies, but recent LinkedIn activity from Michael suggests they may be researching tactical allocation strategies for their high-net-worth clients\n    - **From Salesforce:** You last met with Robert 3 weeks ago. In your notes, he mentioned they are looking to implement tactical risk management but are concerned about volatility for their older clients.\n    - **Pipeline:** There is an open opportunity for $8M in Apollo Debt Solutions (ADS) currently in the Proposal stage." },
-        { type: 'tool', name: 'get_alpha_contacts', requestType: 'salesforce_query', duration: 1800, preText: 'Pulling Alpha Wealth Management Group contacts from Salesforce' },
-        { type: 'tool', name: 'get_alpha_account', requestType: 'salesforce_query', duration: 1600, preText: 'Retrieving Alpha Wealth Management Group account information' },
-        { type: 'tool', name: 'get_alpha_opportunities', requestType: 'salesforce_query', duration: 2000, preText: 'Checking opportunities with Alpha Wealth Management Group' },
-        { type: 'tool', name: 'get_alpha_meeting_notes', requestType: 'salesforce_query', duration: 1400, preText: 'Pulling meeting note history for Alpha Wealth Management Group' },
-        { type: 'tool', name: 'read_alpha_group_website', requestType: 'external_search', duration: 5400, preText: "Reading the Alpha Group's website" },
-        { type: 'tool', name: 'parse_alpha_linkedin', requestType: 'external_search', duration: 4800, preText: 'Parsing Alpha Group Linkedin' },
-        { type: 'tool', name: 'check_alpha_finra', requestType: 'external_search', duration: 6000, preText: 'Checking Alpha Group FINRA profiles' },
+        { type: 'tool', name: 'get_alpha_contacts', duration: 1800, preText: 'Pulling Alpha Wealth Management Group contacts from Salesforce' },
+        { type: 'tool', name: 'get_alpha_account', duration: 1600, preText: 'Retrieving Alpha Wealth Management Group account information' },
+        { type: 'tool', name: 'get_alpha_opportunities', duration: 2000, preText: 'Checking opportunities with Alpha Wealth Management Group' },
+        { type: 'tool', name: 'get_alpha_meeting_notes', duration: 1400, preText: 'Pulling meeting note history for Alpha Wealth Management Group' },
+        { type: 'tool', name: 'read_alpha_group_website', duration: 5400, preText: "Reading the Alpha Group's website" },
+        { type: 'tool', name: 'parse_alpha_linkedin', duration: 4800, preText: 'Parsing Alpha Group Linkedin' },
+        { type: 'tool', name: 'check_alpha_finra', duration: 6000, preText: 'Checking Alpha Group FINRA profiles' },
         { type: 'text', delay: 1500, content: "I've completed my research. Details on the teams are below:\n\n**Williams Group Meeting (Morgan Stanley) - 11:00 AM**\n- The Williams group is made up of:\n    - Robert J. Williams, CFP\u00ae - Senior Vice President, Senior Portfolio Management Director\n    - Jennifer Williams-Chen, CFA - Vice President, Wealth Advisor\n    - Michael Torres - Financial Advisor Associate\n- Robert founded the practice 28 years ago and recently brought his daughter Jennifer onto the team after she started her career at Goldman Sachs Asset Management.\n- The Williams Group has historically favored low cost ETFs and index strategies, but recent LinkedIn activity from Michael suggests they may be researching tactical allocation strategies for high-net-worth clients\n- **From Salesforce:** You last met with Robert 3 weeks ago. In your notes, he mentioned they are looking to implement tactical risk management but are concerned about volatility for their older clients.\n- **Pipeline:** There is an open opportunity for $8M in Apollo Debt Solutions (ADS) currently in the Proposal stage.\n- **Opportunity:** Position Apollo Debt Solutions (ADS) as a data-driven approach to managing market volatility\u2014emphasize that data beats feelings when it comes to risk management.\n\n**Alpha Wealth Management Group Meeting (RBC) - 2:00 PM**\n- The Alpha Wealth Management Group is made up of:\n    - David Chen, CFA, CFP\u00ae - Managing Director, Senior Portfolio Manager\n    - Patricia Morrison, CIMA\u00ae - Vice President, Wealth Strategist\n    - James Rodriguez - Associate Wealth Advisor\n- David and Patricia have partnered for 18 years and were recently named to Barron's Top 100 Financial Advisors list. They manage over $2.1B in client assets.\n- The team specializes in ultra-high-net-worth families and institutional endowments.\n- **From Salesforce:** Last meeting was 6 weeks ago with David. He expressed interest in Apollo Debt Solutions (ADS) but wanted to wait for Q4 performance data before committing.\n- **Pipeline:** There is an open opportunity for $15M in Apollo Debt Solutions (ADS) currently in the Qualification stage.\n- **Opportunity**: The Alpha team is already invested in a diversified allocation but is seeking capital preservation. Emphasize Apollo Debt Solutions (ADS)\u2019s risk-managed approach\u2014let the data drive decisions, not emotions." }
       ],
       suggestedPrompts: [
@@ -40,8 +40,8 @@
       intro: "",
       introDelay: 600,
       actions: [
-        { type: 'tool', name: 'search_salesforce_campaign', requestType: 'salesforce_query', duration: 2100, preText: 'Search Salesforce for The Daily Spark campaign' },
-        { type: 'tool', name: 'check_campaign_members', requestType: 'salesforce_query', duration: 600, preText: 'Checking campaign members for Advisors' },
+        { type: 'tool', name: 'search_salesforce_campaign', duration: 2100, preText: 'Search Salesforce for The Daily Spark campaign' },
+        { type: 'tool', name: 'check_campaign_members', duration: 600, preText: 'Checking campaign members for Advisors' },
         { type: 'text', delay: 300, content: "None of these advisors are signed up for the current The Daily Spark campaign. Would you like me to add them?" }
       ],
       suggestedPrompts: [
@@ -53,11 +53,11 @@
       intro: "",
       introDelay: 200,
       actions: [
-        { type: 'tool', name: 'add_robert_williams', requestType: 'salesforce_create', duration: 500, preText: 'Adding Robert J. Williams' },
-        { type: 'tool', name: 'add_jennifer_williams_chen', requestType: 'salesforce_create', duration: 500, preText: 'Adding Jennifer Williams-Chen' },
-        { type: 'tool', name: 'add_michael_torres', requestType: 'salesforce_create', duration: 500, preText: 'Adding Michael Torres' },
-        { type: 'tool', name: 'add_david_chen', requestType: 'salesforce_create', duration: 500, preText: 'Adding David Chen' },
-        { type: 'tool', name: 'add_patricia_morrison', requestType: 'salesforce_create', duration: 500, preText: 'Adding Patricia Morrison' },
+        { type: 'tool', name: 'add_robert_williams', duration: 500, preText: 'Adding Robert J. Williams' },
+        { type: 'tool', name: 'add_jennifer_williams_chen', duration: 500, preText: 'Adding Jennifer Williams-Chen' },
+        { type: 'tool', name: 'add_michael_torres', duration: 500, preText: 'Adding Michael Torres' },
+        { type: 'tool', name: 'add_david_chen', duration: 500, preText: 'Adding David Chen' },
+        { type: 'tool', name: 'add_patricia_morrison', duration: 500, preText: 'Adding Patricia Morrison' },
         { type: 'text', delay: 400, content: "I've added Robert J. Williams, Jennifer Williams-Chen, and Michael Torres from the Williams Group and David Chen and Patricia Morrison from the Alpha Wealth Management Group.\n\nI did not add James Rodriguez from the Alpha Wealth Management Group because he has opted out of marketing emails. You will need confirmation from him before you are able to add him to email communication." }
       ],
       suggestedPrompts: []
@@ -69,9 +69,9 @@
       intro: "",
       introDelay: 300,
       actions: [
-        { type: 'tool', name: 'look_for_contacts_last_week', requestType: 'salesforce_query', duration: 700, preText: 'Looking for Contacts you met with last week' },
-        { type: 'tool', name: 'look_at_madison_opportunities', requestType: 'salesforce_query', duration: 600, preText: 'Looking at Opportunities associated with Madison' },
-        { type: 'tool', name: 'update_madison_opportunity', requestType: 'salesforce_update', duration: 800, preText: 'Updating Opportunity' },
+        { type: 'tool', name: 'look_for_contacts_last_week', duration: 700, preText: 'Looking for Contacts you met with last week' },
+        { type: 'tool', name: 'look_at_madison_opportunities', duration: 600, preText: 'Looking at Opportunities associated with Madison' },
+        { type: 'tool', name: 'update_madison_opportunity', duration: 800, preText: 'Updating Opportunity' },
         { type: 'text', delay: 400, content: "I've updated the opportunity with Madison to Closed - Pending Onboarding. Would you like me to look at other opportunities that have been pending onboarding for more than two weeks?" }
       ],
       suggestedPrompts: [
@@ -83,9 +83,9 @@
       intro: "I'll pull those now.",
       introDelay: 300,
       actions: [
-        { type: 'tool', name: 'pull_pending_opportunities', requestType: 'salesforce_query', duration: 900, preText: 'Pulling Opportunities' },
+        { type: 'tool', name: 'pull_pending_opportunities', duration: 900, preText: 'Pulling Opportunities' },
         { type: 'text', delay: 400, content: "It looks like the below opportunities are having some issues.\n\n- Generational Wealth - Apollo Debt Solutions (ADS) - $100M\n- Creative Planning - Apollo Debt Solutions (ADS) - $16M\n\nI'll look at trades that aren't in good order." },
-        { type: 'tool', name: 'read_nigo_cases', requestType: 'salesforce_query', duration: 800, preText: 'Reading NIGO Cases' },
+        { type: 'tool', name: 'read_nigo_cases', duration: 800, preText: 'Reading NIGO Cases' },
         { type: 'text', delay: 500, content: "It looks like Generational Wealth is missing it's subscription doc. Creative Planning's NIGO issues appear to be resolved this morning. You should see that trade come in shortly.\n\nI've drafted the below email to help you get back to George at Generational.\n\n---\n\nHi George,\n\nI hope that your daughter's gymnastics championship went well last weekend!\n\nI noticed that there's an error with the subscription document that was submitted last week. Do you mind re-submitting that now so we can get you into the fund?\n\nBest,\n\nLiam\n\n---\n\nPlease let me know if there is anything else that I can do to help!" }
       ],
       suggestedPrompts: []
@@ -97,7 +97,7 @@
       intro: "Starting!",
       introDelay: 400,
       actions: [
-        { type: 'tool', name: 'pull_opportunity_data', requestType: 'salesforce_query', duration: 1000, preText: 'Pulling Opportunity data' },
+        { type: 'tool', name: 'pull_opportunity_data', duration: 1000, preText: 'Pulling Opportunity data' },
         {
           type: 'chart',
           chartTitle: 'Total Pipeline by Region for Wirehouse Team',
@@ -120,7 +120,7 @@
       intro: "",
       introDelay: 300,
       actions: [
-        { type: 'tool', name: 'pull_opportunity_history', requestType: 'salesforce_query', duration: 900, preText: 'Pulling Opportunity History' },
+        { type: 'tool', name: 'pull_opportunity_history', duration: 900, preText: 'Pulling Opportunity History' },
         { type: 'text', delay: 500, content: "It looks like three big opportunities were marked as closed last week. All three cited competitor strategies with more aggressive yield profiles as the leading reason that our Apollo Debt Solutions (ADS) wasn\u2019t selected.\n\nIt also looks there have been no activities against these opportunities for 5 months. It\u2019s possible that they were lost last quarter, and Pat waited to update his opportunities until this week. Remember: data beats feelings\u2014let\u2019s analyze the patterns and adjust our approach." }
       ],
       suggestedPrompts: []
@@ -286,8 +286,7 @@
     var displayName = preText || name;
     el.innerHTML =
       SPINNER_SVG +
-      '<span class="tool-name">' + escapeHtml(displayName) + '</span>' +
-      '<span class="tool-type">\u00b7 ' + escapeHtml(requestType) + '</span>';
+      '<span class="tool-name">' + escapeHtml(displayName) + '</span>';
     container.appendChild(el);
     scrollChat();
     return el;

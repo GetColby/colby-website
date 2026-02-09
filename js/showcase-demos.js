@@ -6,8 +6,8 @@
   var demoScenarios = {
     // Showcase 01: Granular Reports in Seconds
     showcaseDemo1: [
-      { type: 'tool', name: 'Pulling opportunity data', requestType: 'salesforce_query', duration: 1000 },
-      { type: 'tool', name: 'Aggregating pipeline by region', requestType: 'salesforce_query', duration: 1200 },
+      { type: 'tool', name: 'Pulling opportunity data', duration: 1000 },
+      { type: 'tool', name: 'Aggregating pipeline by region', duration: 1200 },
       {
         type: 'chart',
         chartTitle: 'Revenue by Region',
@@ -26,20 +26,20 @@
     showcaseDemo2: [
       { type: 'user', text: "I met with Sarah Chen at Fidelity about a $12M allocation" },
       { type: 'pause', duration: 500 },
-      { type: 'tool', name: 'Parsing meeting notes', requestType: 'salesforce_query', duration: 800 },
-      { type: 'tool', name: 'Matching contact: Sarah Chen', requestType: 'salesforce_query', duration: 700 },
-      { type: 'tool', name: 'Creating new Opportunity', requestType: 'salesforce_create', duration: 900 },
-      { type: 'tool', name: 'Logging activity to Salesforce', requestType: 'salesforce_update', duration: 600 },
+      { type: 'tool', name: 'Parsing meeting notes', duration: 800 },
+      { type: 'tool', name: 'Matching contact: Sarah Chen', duration: 700 },
+      { type: 'tool', name: 'Creating new Opportunity', duration: 900 },
+      { type: 'tool', name: 'Logging activity to Salesforce', duration: 600 },
       { type: 'text', delay: 400, content: "Done! Created a new **$12M opportunity** for Sarah Chen at Fidelity." },
       { type: 'text', delay: 200, content: 'Meeting activity has been logged and linked to the contact record.' }
     ],
 
     // Showcase 03: Key Information at the Right Time
     showcaseDemo3: [
-      { type: 'tool', name: 'Pulling calendar events', requestType: 'salesforce_query', duration: 1200 },
-      { type: 'tool', name: 'Researching Williams Group', requestType: 'external_search', duration: 1000 },
-      { type: 'tool', name: 'Checking FINRA records', requestType: 'external_search', duration: 1400 },
-      { type: 'tool', name: 'Pulling CRM history', requestType: 'salesforce_query', duration: 1600 },
+      { type: 'tool', name: 'Pulling calendar events', duration: 1200 },
+      { type: 'tool', name: 'Researching Williams Group', duration: 1000 },
+      { type: 'tool', name: 'Checking FINRA records', duration: 1400 },
+      { type: 'tool', name: 'Pulling CRM history', duration: 1600 },
       { type: 'text', delay: 600, content: '**Williams Group Meeting Brief**' },
       { type: 'text', delay: 200, content: 'Robert J. Williams, CFP\u00ae \u2014 Senior VP at Morgan Stanley. AUA: **$12M+**' },
       { type: 'text', delay: 200, content: '**Pipeline:** $8M in Apollo Debt Solutions (Proposal stage)' },

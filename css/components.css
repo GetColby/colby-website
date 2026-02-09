@@ -587,9 +587,6 @@
   color: hsl(var(--foreground) / 0.9);
 }
 
-.tool-call .tool-type {
-  color: hsl(var(--muted-foreground) / 0.7);
-}
 
 /* Typing indicator */
 .typing-indicator {
