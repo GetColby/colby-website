@@ -1448,6 +1448,10 @@
     font-size: 16px;
   }
 
+  .hero-badge {
+    display: none;
+  }
+
   .hero-headline {
     font-size: 32px;
   }
