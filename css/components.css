@@ -373,6 +373,8 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   border-width: 1px;
   border-style: solid;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .message.user .msg-bubble {
@@ -426,6 +428,7 @@
   background: hsl(var(--muted) / 0.5);
   margin: 4px 0;
   transition: background 0.2s;
+  max-width: 100%;
 }
 
 .tool-call:hover {
@@ -1360,11 +1363,16 @@
     align-self: center;
     transform: none !important;
     order: -1;
+    min-width: 0;
+  }
+
+  .demo-scenes {
+    min-width: 0;
   }
 
   .demo-sticky-panel .chat-container {
     width: 100%;
-    max-width: 480px;
+    max-width: 100%;
     height: auto;
     max-height: 500px;
     margin: 0 auto;
@@ -1392,6 +1400,10 @@
   .faq-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .footer {
+    padding: 32px 24px 20px;
   }
 }
 
@@ -1465,6 +1477,22 @@
   .team-grid {
     grid-template-columns: 1fr;
     max-width: 100%;
+  }
+
+  .integration-card {
+    padding: 24px 20px;
+  }
+
+  .team-card {
+    padding: 28px 20px;
+  }
+
+  .ai-card {
+    padding: 20px 16px;
+  }
+
+  .faq-item {
+    padding: 20px 0;
   }
 
   .suggestions {
